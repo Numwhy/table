@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>鲁氏家族成员登记表</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/LCalendar.min.css">
+    <link rel="stylesheet" href="css/layout.min.css">
+    <link rel="stylesheet" href="css/scs.min.css">
+</head>
+<body>
+<div id="wrap">
+    <h1>鲁氏家族成员登记表</h1>
+    <form action="" method="post">
+        <ul>
+            <li>
+                <span class="b">姓名：</span>
+                <input type="text" class="name bor" placeholder="请输入姓名！">
+            </li>
+            <li>
+                <span class="b">性别：</span>
+                <input type="radio" name="man">&nbsp;&nbsp;男&nbsp;
+                <input type="radio" name="man">&nbsp;&nbsp;女
+            </li>
+            <li>
+                <span class="b">出生年月：</span>
+                <input type="text" class="bor" name="date" id="date" placeholder="请选择出生日期！" readonly>
+            </li>
+            <li>
+                <span class="b">生肖：</span>
+                <select name="select" id="select">
+                    <option value="请选择">--请选择--</option>
+                    <option value="鼠">鼠</option>
+                    <option value="牛">牛</option>
+                    <option value="虎">虎</option>
+                    <option value="兔">兔</option>
+                    <option value="龙">龙</option>
+                    <option value="蛇">蛇</option>
+                    <option value="马">马</option>
+                    <option value="羊">羊</option>
+                    <option value="猴">猴</option>
+                    <option value="鸡">鸡</option>
+                    <option value="狗">狗</option>
+                    <option value="猪">猪</option>
+                </select>
+            </li>
+            <li>
+                <span class="b">工作单位：</span>
+                <input type="text" class="gzdw bor" placeholder="请输入工作单位">
+            </li>
+            <li>
+                <span class="b">职务：</span>
+                <input type="text" class="zw bor" placeholder="请输入职务">
+            </li>
+            <li>
+                <span class="b">电话：</span>
+                <input type="text" class="tel bor" placeholder="请输入电话">
+            </li>
+            <div class="cl"></div>
+        </ul>
+        <ul>
+            <li class="f-none">
+                <span class="b">现居住地：</span>
+                <input type="text" class="adress bor" placeholder="请输入居住地址">
+            </li>
+        </ul>
+        <ul>
+            <li class="f-none">
+                <p class="b">个人简历：</p>
+                <textarea name="jl" id="jl" rows="10"></textarea>
+            </li>
+            <li class="f-none">
+                <p class="b">历代迁移情况：</p>
+                <textarea name="ldqk" id="ldqk" rows="10"></textarea>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <span class="b">父亲：</span>
+                <input type="text" class="name bor" placeholder="请输入父亲姓名！">
+            </li>
+            <li>
+                <span class="b">母亲：</span>
+                <input type="text" class="name bor" placeholder="请输入母亲姓名！">
+            </li>
+            <li>
+                <span class="b">祖父：</span>
+                <input type="text" class="name bor" placeholder="请输入祖父姓名！">
+            </li>
+            <li>
+                <span class="b">祖母：</span>
+                <input type="text" class="name bor" placeholder="请输入祖母姓名！">
+            </li>
+            <li>
+                <span class="b">祖母：</span>
+                <input type="text" class="name bor" placeholder="请输入祖母姓名！">
+            </li>
+            <li>
+                <span class="b">配偶：</span>
+                <input type="text" class="name bor" placeholder="请输入配偶姓名！">
+            </li>
+            <li>
+                <span class="b">籍贯：</span>
+                <input type="text" id="jg" class="name bor" data-key="1-36-7" value="" placeholder="请输入籍贯！">
+            </li>
+            <li>
+                <span class="b">单位及职务：</span>
+                <input type="text" class="name bor" placeholder="请输入职务！">
+            </li>
+            <li>
+                <span class="b">子：</span>
+                <input type="text" class="name bor" placeholder="请输入儿子姓名！">
+            </li>
+            <li>
+                <span class="b">女：</span>
+                <input type="text" class="name bor" placeholder="请输入女儿姓名！">
+            </li>
+            <div class="cl"></div>
+        </ul>
+        <ul>
+            <li class="f-none">
+                <span class="b">备注：</span>
+                <input type="text" class="name bor bz" placeholder="请输入！">
+            </li>
+        </ul>
+        <div class="home-j clearfix">
+            <p>以汝守鸿烈</p>
+            <p>有恒斯可常</p>
+            <p>述祖宜敬宗</p>
+            <p>百世毓贤良</p>
+        </div>
+        <button class="sure-tj">确定</button>
+    </form>
+</div>
+<script src="js/jquery3.3.1.min.js"></script>
+<script src="js/LCalendar.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/style.js"></script>
+<script>
+    var calendar = new LCalendar();
+    calendar.init({
+        'trigger':'#date',
+        'type':'date',
+        'minDate':(new Date().getFullYear()-1000) + '-' + 1 + '-' + 1,
+        'maxDate':(new Date().getFullYear()) + '-' + 12 + '-' + 31
+    });
+</script>
+</body>
+</html>

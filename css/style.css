@@ -1,0 +1,78 @@
+/*清除样式*/
+html,body,div,span,hr,h1,h2,h3,h4,h5,h6,p,pre,a,em,img,small,strong,sub,sup,b,dl,dt,dd,ol,ul,li,form,label,table,caption,tbody,tfoot,thead,tr,th,td,form,input,textarea{margin:0;padding:0;border:none;}
+ul li{list-style:none;}
+input,textarea{
+    background:none;
+    outline:none;
+    resize: none;
+}
+/* 清除浮动 */
+.clearfix{
+    overflow:hidden;
+}
+.clearfix:after{
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+.cl{clear:both;}
+/* 页面最小最大宽 */
+html{
+    max-width:768px;
+    min-width:320px;
+    margin:0 auto;
+    background:#f1f1f1;
+    font-size:100px;
+}
+#wrap{
+    font-size:0.14rem;
+    background:#fff;
+    padding:0.1rem 0.05rem;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+#wrap h1{
+    font-size:0.16rem;
+    text-align:center;
+    margin-bottom: 0.2rem;
+}
+#wrap ul li{
+    float:left;
+    padding:0.1rem 0.05rem;
+}
+.bor{
+    border-bottom:0.01rem solid #ccc;
+}
+.b{font-weight: bold;}
+.f-none{float:none !important;}
+#jl,#ldqk{
+    width:100%;
+    border:0.01rem solid #ccc;
+    margin-top:0.05rem;
+    padding:0.05rem 0.1rem;
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+}
+.sure-tj{
+    width:80%;
+    text-align:center;
+    color:#fff;
+    background:#009688;
+    border:none;
+    border-radius:0.1rem;
+    -webkit-border-radius: 0.1rem;
+    padding:0.1rem 0;
+    display:block;
+    margin:0.2rem auto 0.1rem;
+}
+.bz,.adress{
+    width:85%;
+}
+.home-j p{
+    width:25%;
+    text-align:center;
+    color:#ff0000;
+    float: left;
+}
