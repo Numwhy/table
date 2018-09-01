@@ -67,8 +67,9 @@ html{
     display:block;
     margin:0.2rem auto 0.1rem;
 }
-.bz,.adress{
+.bz,.adress,.gzdw{
     width:85%;
+    margin-top:0.05rem;
 }
 .home-j p{
     width:25%;
