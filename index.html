@@ -16,16 +16,16 @@
 <body>
 <div id="wrap">
     <h1>鲁氏家族成员入谱登记表</h1>
-    <form action="" method="post">
+    <form method="post" id="form">
         <ul>
             <li>
                 <span class="b">姓名：</span>
-                <input type="text" class="name bor" placeholder="请输入姓名！">
+                <input type="text" class="name bor namexp" name="name" placeholder="请输入姓名！">
             </li>
             <li>
                 <span class="b">性别：</span>
-                <input type="radio" name="man">&nbsp;男&nbsp;
-                <input type="radio" name="man">&nbsp;女
+                <input type="radio" name="man" value="男">&nbsp;男&nbsp;
+                <input type="radio" name="man" value="女">&nbsp;女
             </li>
             <li>
                 <span class="b">出生年月：</span>
@@ -51,22 +51,22 @@
             </li>
             <li>
                 <span class="b">电话：</span>
-                <input type="text" class="tel bor" placeholder="请输入电话">
+                <input type="text" class="tel bor" name="tel" placeholder="请输入电话">
             </li>
             <div class="cl"></div>
         </ul>
         <ul>
             <li class="f-none">
                 <span class="b">工作单位：</span>
-                <input type="text" class="gzdw bor" placeholder="请输入工作单位">
+                <input type="text" class="gzdw bor dw1" name="workadr" placeholder="请输入工作单位">
             </li>
             <li class="f-none">
                 <span class="b">职务：</span>
-                <input type="text" class="zw bor" placeholder="请输入职务">
+                <input type="text" class="zw bor namexp" name="workzw" placeholder="请输入职务">
             </li>
             <li class="f-none">
                 <span class="b">现居住地：</span>
-                <input type="text" class="adress bor" placeholder="请输入居住地址">
+                <input type="text" class="adress bor dw1" name="homeadr" placeholder="请输入居住地址">
             </li>
         </ul>
         <ul>
@@ -82,50 +82,46 @@
         <ul>
             <li>
                 <span class="b">父亲：</span>
-                <input type="text" class="name bor" placeholder="请输入父亲姓名！">
+                <input type="text" class="bor father namexp" name="father" placeholder="请输入父亲姓名！">
             </li>
             <li>
                 <span class="b">母亲：</span>
-                <input type="text" class="name bor" placeholder="请输入母亲姓名！">
+                <input type="text" class="bor mother namexp" name="mother" placeholder="请输入母亲姓名！">
             </li>
             <li>
                 <span class="b">祖父：</span>
-                <input type="text" class="name bor" placeholder="请输入祖父姓名！">
+                <input type="text" class="bor grandfa namexp" name="grandfa" placeholder="请输入祖父姓名！">
             </li>
             <li>
                 <span class="b">祖母：</span>
-                <input type="text" class="name bor" placeholder="请输入祖母姓名！">
-            </li>
-            <li>
-                <span class="b">祖母：</span>
-                <input type="text" class="name bor" placeholder="请输入祖母姓名！">
+                <input type="text" class="bor grandmo namexp" name="grandmo" placeholder="请输入祖母姓名！">
             </li>
             <li>
                 <span class="b">配偶：</span>
-                <input type="text" class="name bor" placeholder="请输入配偶姓名！">
+                <input type="text" class="bor wife namexp" name="wife" placeholder="请输入配偶姓名！">
             </li>
             <li>
                 <span class="b">籍贯：</span>
-                <input type="text" id="jg" class="name bor" data-key="1-36-7" value="" placeholder="请输入籍贯！" readonly>
+                <input type="text" id="jg" class="bor jg" name="jg" data-key="1-36-7" value="" placeholder="请输入籍贯！" readonly>
             </li>
             <li>
                 <span class="b">单位及职务：</span>
-                <input type="text" class="name bor" placeholder="请输入职务！">
+                <input type="text" class="bor zw1 dw1" name="zw1" placeholder="请输入职务！">
             </li>
             <li>
                 <span class="b">子：</span>
-                <input type="text" class="name bor" placeholder="请输入儿子姓名！">
+                <input type="text" class="bor child" name="child namexp" placeholder="请输入儿子姓名！">
             </li>
             <li>
                 <span class="b">女：</span>
-                <input type="text" class="name bor" placeholder="请输入女儿姓名！">
+                <input type="text" class="bor girl" name="girl namexp" placeholder="请输入女儿姓名！">
             </li>
             <div class="cl"></div>
         </ul>
         <ul>
             <li class="f-none">
                 <span class="b">备注：</span>
-                <input type="text" class="name bor bz" placeholder="请输入！">
+                <input type="text" class="bor bz" name="bz" placeholder="请输入！">
             </li>
         </ul>
         <div class="home-j clearfix">
@@ -134,8 +130,8 @@
             <p>述祖宜敬宗</p>
             <p>百世毓贤良</p>
         </div>
-        <button class="sure-tj">确定</button>
     </form>
+    <button class="sure-tj">确定</button>
 </div>
 <script src="js/jquery3.3.1.min.js"></script>
 <script src="js/LCalendar.min.js"></script>

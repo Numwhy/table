@@ -1,9 +1,6 @@
 $(function() {
     /**
      * 通过数组id获取地址列表数组
-     *
-     * @param {Number} id
-     * @return {Array}
      */
     function getAddrsArrayById(id) {
         var results = [];
@@ -21,10 +18,6 @@ $(function() {
     }
     /**
      * 通过开始的key获取开始时应该选中开始数组中哪个元素
-     *
-     * @param {Array} StartArr
-     * @param {Number|String} key
-     * @return {Number}
      */
     function getStartIndexByKeyFromStartArr(startArr, key) {
         var result = 0;
@@ -116,4 +109,77 @@ $(function() {
             }
         });
     });
+
+    //提交验证
+    var sureTj = $('.sure-tj'),
+        name = $('.name').val(),
+        sex = $('input[name=man]'),
+        date = $('#date').val(),
+        sx = $('#select option').val(),
+        tel = $('.tel').val(),
+        workadr = $('.gzdw').val(),
+        zw = $('.zw').val(),
+        homeadr = $('.adress').val(),
+        jl = $('#jl').val(),
+        ldqk = $('#ldqk').val(),
+        father = $('.father').val(),
+        mother = $('.mother').val(),
+        grandfa = $('.grandfa').val(),
+        grandmo = $('.grandmo').val(),
+        wife = $('.wife').val(),
+        jg = $('.jg').val(),
+        zw1 = $('.zw1').val(),
+        child = $('.child'),
+        girl = $('.girl'),
+        namexp = $('.namexp'),
+        dw1 = $('.dw1');
+    sureTj.on('click',function(){
+        var ainp = $('#form ul li').find('input');
+        var sexVal = '';
+        var nameYz = /^[\u4e00-\u9fa5]{0,}$/;//验证姓名，只能是中文
+        var telYz = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;//验证手机号
+        var adrYz = /^[\u4E00-\u9FA50-9]+$/;//验证地址
+
+        if(telYz.test(tel) === false){
+            alert('请输入正确的手机号码！(11位数字)');
+            return false;
+        }
+        namexp.each(function(){
+            if(nameYz.test($(this).val()) === false){
+                alert('姓名只能是中文字符！'+ $(this).val());
+                return false;
+            }
+        });
+        if(adrYz.test(dw1.val()) === false){
+            alert('地址只能是中文，数字！'+ $(this).val());
+            return false;
+        }
+        function yz(){
+            ainp.each(function(){
+                if($(this).val() === ''){
+                    alert($(this).siblings('span').text() + '不能为空！');
+                    return false;
+                }
+            });
+            if(sex.is(':checked')){
+                sexVal = $(this).val();
+            }else{
+                alert('请选择性别！');
+                return false;
+            }
+            if(sx === '请选择'){
+                alert('请选择属相！');
+                return false;
+            }
+            if(date === ''){
+                alert('请选择出生日期！');
+                return false;
+            }
+            if(jg === ''){
+                alert('请选择籍贯！');
+                return false;
+            }
+        }
+        yz();
+    })
 });
