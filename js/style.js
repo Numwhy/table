@@ -111,35 +111,34 @@ $(function() {
     });
 
     //提交验证
-    var sureTj = $('.sure-tj'),
-        name = $('.name').val(),
-        sex = $('input[name=man]'),
-        date = $('#date').val(),
-        sx = $('#select option').val(),
-        tel = $('.tel').val(),
-        workadr = $('.gzdw').val(),
-        zw = $('.zw').val(),
-        homeadr = $('.adress').val(),
-        jl = $('#jl').val(),
-        ldqk = $('#ldqk').val(),
-        father = $('.father').val(),
-        mother = $('.mother').val(),
-        grandfa = $('.grandfa').val(),
-        grandmo = $('.grandmo').val(),
-        wife = $('.wife').val(),
-        jg = $('.jg').val(),
-        zw1 = $('.zw1').val(),
-        child = $('.child'),
-        girl = $('.girl'),
-        namexp = $('.namexp'),
-        dw1 = $('.dw1');
+    var sureTj = $('.sure-tj');
     sureTj.on('click',function(){
         var ainp = $('#form ul li').find('input');
-        var sexVal = '';
+        var sexVal = '',
+            name = $('.name').val(),
+            sex = $('input[name=man]'),
+            date = $('#date').val(),
+            sx = $('#select option').val(),
+            tel = $('.tel').val(),
+            workadr = $('.gzdw').val(),
+            zw = $('.zw').val(),
+            homeadr = $('.adress').val(),
+            jl = $('#jl').val(),
+            ldqk = $('#ldqk').val(),
+            father = $('.father').val(),
+            mother = $('.mother').val(),
+            grandfa = $('.grandfa').val(),
+            grandmo = $('.grandmo').val(),
+            wife = $('.wife').val(),
+            jg = $('.jg').val(),
+            zw1 = $('.zw1').val(),
+            child = $('.child'),
+            girl = $('.girl'),
+            namexp = $('.namexp'),
+            dw1 = $('.dw1');
         var nameYz = /^[\u4e00-\u9fa5]{0,}$/;//验证姓名，只能是中文
         var telYz = /^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;//验证手机号
         var adrYz = /^[\u4E00-\u9FA50-9]+$/;//验证地址
-
         if(telYz.test(tel) === false){
             alert('请输入正确的手机号码！(11位数字)');
             return false;
@@ -181,5 +180,6 @@ $(function() {
             }
         }
         yz();
+        $('#form').submit();
     })
 });
